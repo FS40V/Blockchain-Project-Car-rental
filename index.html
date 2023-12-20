@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Car Rental DApp</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Car Rental DApp</h1>
+        <div id="rentalInfo">
+            <h2>Rental Information</h2>
+            <p><strong>Plate:</strong> <span id="plate"></span></p>
+            <p><strong>Expiration Time:</strong> <span id="expirationTime"></span></p>
+            <p><strong>Car Type:</strong> <span id="carType"></span></p>
+        </div>
+
+        <div id="rentalOperations">
+            <h2>Rental Operations</h2>
+            <label for="plateInput">Plate:</label>
+            <input type="text" id="plateInput" placeholder="Enter plate">
+
+            <label for="hoursInput">Number of Hours:</label>
+            <input type="number" id="hoursInput" placeholder="Enter hours">
+
+            <label for="carTypeSelect">Car Type:</label>
+            <select id="carTypeSelect">
+                <option value="0">Economy</option>
+                <option value="1">Standard</option>
+                <option value="2">Luxury</option>
+            </select>
+
+            <button onclick="startRental()">Start Rental</button>
+            <button onclick="cancelRental()">Cancel Rental</button>
+            <button onclick="transferRental()">Transfer Rental</button>
+            <button onclick="getRentalInfo()">Get Rental Info</button>
+        </div>
+
+        <div id="message"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.6.0/dist/web3.min.js"></script>
+    <script src="app.js"></script>
+
+</body>
+</html>
